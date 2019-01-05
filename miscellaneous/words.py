@@ -1,59 +1,51 @@
-#!/usr/bin/env python3
-"""Retrieve and print words from a URL.
+"""Retrieve and print words from a URL
 
-Usage:
+Usage: 
     python3 words.py <URL>
-
 """
 
+
+from urllib.request import urlopen
 import sys
-from urllib.request import urlopen  
 
 
-def fetch_word(urls): 
+def fetch_words(url):
     """Fetch a list of words from a URL.
     
-    Args: 
-        urls: the URL of the UTF-8 text document.
+    Args:
+        url: The URL of a UTF-8 text documents
 
     Returns:
-        A list of strings containing words from the document.    
+        A list of strings containing words.     
     """
-    with urlopen(urls) as story:
-        story_text = []
-        for text in story:
-            line = text.decode('utf-8').split()
-            for i in line:
-                story_text.append(i)
-    return story_text            
+    with urlopen(url) as f:
+        text = []
+        for lines in f:
+            line = lines.decode("utf-8").split()
+            for words in line:
+                text.append(words)
+    return text
 
-# def joined_text(text):
-#     j_text = ' '.join(text)
-#     print(j_text)
 
 def print_items(items):
-    """Print items one per line.
+    """Print items one per line
     
     Args:
-        items: an iterable collection of items
-            
+        An iterable series of printable items
     """
     for item in items:
         print(item)
 
 
-def main(urls):    
-    """Print words contained in a text document from a URL
-    
-    ARGS:
-        urls: the URL containing the text document.
+def main(url):
+    """Fetch words and print them.
+
+    Args:
+        url: URL of text document
     """
-    word = fetch_word(urls)
-    #joined_text(word)
-    print_items(word)
-    
+    f = fetch_words(url)
+    print_items(f)        
 
 
 if __name__ == "__main__":
-    main(sys.argv[1]) # sys.argv[0] is the module file name
-
+    main(sys.argv[1])
