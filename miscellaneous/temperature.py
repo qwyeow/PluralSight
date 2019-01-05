@@ -32,7 +32,7 @@ print(any(t>28 for t in temperatures))
 
 
 '''
-(base) :~/Documents/PluralSight/PythonFundamentals/PracticeAgain$ python temperature.py
+$ python temperature.py
 
 min =   2.0,            max =  13.0,            average =   9.0
 min =   2.0,            max =  14.0,            average =  10.0
