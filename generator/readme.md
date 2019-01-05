@@ -1,5 +1,5 @@
 
-Command: $ python3 recamen.py recamen.dat 30
+    $ python3 recamen.py recamen.dat 30
 
 This creates a recamen series of length 30 in a file "recamen.dat" as follows:
 
