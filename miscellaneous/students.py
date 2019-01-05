@@ -102,4 +102,30 @@ if __name__ == "__main__":
     pp(students)
 
 
+ """
+$ python3 students.py
+
+Do you want to add new student? Enter Y or N:Y
+Enter student name:Lucy Tay
+Enter student ID:101
+
+Do you want to add new student? Enter Y or N:Y
+Enter student name:Alex Lee
+Enter student ID:156
+
+Do you want to add new student? Enter Y or N:N
+
+Lucy Tay
+Alex Lee
+saving student list in 'students.pickle'
+
+read back saved file 'students.pickle'
+prints out student list
+[{'id': '101', 'name': 'Lucy Tay'}, {'id': '156', 'name': 'Alex Lee'}]
+
+
+
+
+
  
+ """
