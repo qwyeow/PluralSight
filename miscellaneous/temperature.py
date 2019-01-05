@@ -1,3 +1,12 @@
+"""
+Using itertools
+zip(): zip 3 lists together side by side 
+chain(): chain 3 lists together end to end
+any(): returns True if Any element meets criteria
+all(): returns True of ALL elements meet criteria 
+"""
+
+
 from itertools import chain, islice
 
 tuesday = [2,2,3,7,9,10,11,12,10,9,8,8]   
