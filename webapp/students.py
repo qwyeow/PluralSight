@@ -15,5 +15,4 @@ class Student:
         return name.title()
 
     def get_school_name(self):
-        return self.school_name 
-    
+        return self.school_name     
